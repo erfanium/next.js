@@ -120,7 +120,7 @@ export function getOriginalStackFrames(
   )
 }
 
-export function formaFrameSourceFile(file: string) {
+export function formatFrameSourceFile(file: string) {
   return file
     .replace(/^webpack-internal:(\/)+(\.)?/, '')
     .replace(/^webpack:(\/)+(\.)?/, '')
@@ -149,9 +149,9 @@ export function getFrameSource(frame: StackFrame): string {
     // meaningful.
     str += u.pathname
     str += ' '
-    str = formaFrameSourceFile(str)
+    str = formatFrameSourceFile(str)
   } catch {
-    str += formaFrameSourceFile(frame.file || '(unknown)') + ' '
+    str += formatFrameSourceFile(frame.file || '(unknown)') + ' '
   }
 
   if (frame.lineNumber != null) {
