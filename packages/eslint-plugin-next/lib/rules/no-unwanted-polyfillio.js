@@ -23,6 +23,7 @@ const NEXT_POLYFILLED_FEATURES = [
   'Object.entries',
   'Object.getOwnPropertyDescriptor',
   'Object.getOwnPropertyDescriptors',
+  'Object.hasOwn',
   'Object.is',
   'Object.keys',
   'Object.values',
